@@ -27,9 +27,10 @@ const appStore = useAppStore()
 const themeConfig = computed<ThemeConfig>(() => {
   return {
     algorithm: appStore.themeAlgorithm,
-    token: appStore.globalToken,
+    token: appStore.blackPrimaryToken,
     components: {
       Button: appStore.blackPrimaryToken,
+      Checkbox: appStore.defaultToken,
     },
   }
 })

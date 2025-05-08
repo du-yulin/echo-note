@@ -1,5 +1,5 @@
 <template>
-  <a-result status="404" title="404" sub-title="页面不存在...">
+  <a-result class="h-screen bg-bg dark:bg-bg-dark" status="404" title="404" sub-title="页面不存在...">
     <template #extra>
       <a-button @click="redirectHome">返回首页</a-button>
       <a-button type="primary" @click="backLast">返回上一页</a-button>
@@ -10,7 +10,7 @@
 <script setup lang="ts">
 const router = useRouter()
 const redirectHome = () => {
-  router.push('home')
+  router.push({name:'home'})
 }
 const backLast = () => {
   router.go(-1)

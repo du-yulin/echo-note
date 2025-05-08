@@ -40,7 +40,7 @@ export const COLORS = {
  * @description antd主题token
  */
 type AntdThemeToken = { dark: Partial<AliasToken>; light: Partial<AliasToken> }
-export const GLOBAL_TOKEN: Readonly<AntdThemeToken> = {
+export const DEFAULT_TOKEN: Readonly<AntdThemeToken> = {
   light: {
     colorBgBase: COLORS.bg,
     colorPrimary: COLORS.primary,
@@ -54,6 +54,8 @@ export const GLOBAL_TOKEN: Readonly<AntdThemeToken> = {
 }
 export const BLACK_PRIMARY_TOKEN: Readonly<AntdThemeToken> = {
   light: {
+    colorBgBase: COLORS.bg,
+    colorBgLayout: COLORS.bgLayout,
     colorPrimary: COLORS.primaryBlack,
     colorPrimaryHover: COLORS.primaryBlackHover,
     colorPrimaryBg: COLORS.primaryBlackBg,
@@ -61,6 +63,8 @@ export const BLACK_PRIMARY_TOKEN: Readonly<AntdThemeToken> = {
     colorTextLightSolid: COLORS.primaryBlackText, // primary 类型button text颜色
   },
   dark: {
+    colorBgBase: COLORS.bgDark,
+    colorBgLayout: COLORS.bgLayoutDark,
     colorPrimary: COLORS.primaryBlackDark,
     colorPrimaryHover: COLORS.primaryBlackHoverDark,
     colorPrimaryBg: COLORS.primaryBlackBgDark,

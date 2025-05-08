@@ -9,7 +9,7 @@ import {
   SIDER_COVERSHOW_MARGIN_RIGHT_SM,
 } from '@/appConfig'
 import { useScreen } from '@/composables/screen'
-import { GLOBAL_TOKEN, BLACK_PRIMARY_TOKEN } from '@/appConfig'
+import { DEFAULT_TOKEN, BLACK_PRIMARY_TOKEN } from '@/appConfig'
 const { defaultAlgorithm, darkAlgorithm } = theme
 
 export const useAppStore = defineStore('app', () => {
@@ -23,8 +23,8 @@ export const useAppStore = defineStore('app', () => {
     return colorMode.value === 'dark' ? darkAlgorithm : defaultAlgorithm
   })
   //全局token
-  const globalToken = computed(() => {
-    return colorMode.value === 'dark' ? GLOBAL_TOKEN.dark : GLOBAL_TOKEN.light
+  const defaultToken = computed(() => {
+    return colorMode.value === 'dark' ? DEFAULT_TOKEN.dark : DEFAULT_TOKEN.light
   })
   // 黑色主题色token
   const blackPrimaryToken = computed(() => {
@@ -57,7 +57,7 @@ export const useAppStore = defineStore('app', () => {
   return {
     colorMode,
     themeAlgorithm,
-    globalToken,
+    defaultToken,
     blackPrimaryToken,
     headerHeight,
     siderCollapsed,
